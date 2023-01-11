@@ -1,0 +1,8 @@
+# Project exclude paths
+/.gradle/
+/build-logic/.gradle/
+/build-logic/dependency-management/.gradle/
+/build-logic/dependency-management/build/
+/build-logic/shared/.gradle/
+/build-logic/shared/build/
+/modules/bukkit/build/

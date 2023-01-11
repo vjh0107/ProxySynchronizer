@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="126ab516-5c46-4343-87aa-d5b37cfc8b6b" name="lastfarm">
+        <fileTransfer accessType="SFTP" host="158.247.222.19" port="22" sshConfigId="701d9a2c-f03c-49a9-9288-52087bc4fb4b" sshConfig="minecraft@158.247.222.19:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
