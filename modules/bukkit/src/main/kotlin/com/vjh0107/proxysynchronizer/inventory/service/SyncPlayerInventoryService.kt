@@ -18,9 +18,4 @@ interface SyncPlayerInventoryService {
      * 플레이어의 인벤토리를 SyncPlayerInventoryRepository 에 save 합니다.
      */
     fun savePlayerInventory(player: Player)
-
-    /**
-     * 인자로 받은 data 를 통해 플레이어의 인벤토리를 저장합니다.
-     */
-    fun savePlayerInventory(player: Player, data: SyncPlayerInventoryData)
 }

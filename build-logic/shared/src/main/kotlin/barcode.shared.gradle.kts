@@ -3,6 +3,9 @@ plugins {
     kotlin("jvm")
 }
 
+group = project.rootProject.group
+version = project.rootProject.version
+
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }

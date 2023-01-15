@@ -4,24 +4,25 @@ import com.vjh0107.barcode.framework.AbstractBarcodePlugin
 import com.vjh0107.barcode.framework.component.BarcodeComponent
 import com.vjh0107.barcode.framework.database.player.PlayerIDWrapper
 import com.vjh0107.barcode.framework.database.player.getPlayerID
-import com.vjh0107.barcode.framework.database.player.repository.AbstractSavablePlayerDataRepository
 import com.vjh0107.barcode.framework.koin.annotation.BarcodeSingleton
 import com.vjh0107.barcode.framework.serialization.deserialize
 import com.vjh0107.barcode.framework.serialization.serialize
+import com.vjh0107.proxysynchronizer.ProxySavablePlayerDataRepository
 import com.vjh0107.proxysynchronizer.inventory.SyncPlayerInventoryData
 import com.vjh0107.proxysynchronizer.inventory.repository.SyncPlayerInventoryRepository
 import com.vjh0107.proxysynchronizer.inventory.entity.PlayerInventoryDataTable
 import com.vjh0107.proxysynchronizer.inventory.entity.PlayerInventoryEntity
 import org.bukkit.entity.Player
+import java.time.LocalDateTime
 
 @BarcodeComponent
 @BarcodeSingleton(binds = [SyncPlayerInventoryRepository::class])
 class SyncPlayerInventoryRepositoryImpl(
     plugin: AbstractBarcodePlugin
-) : AbstractSavablePlayerDataRepository<SyncPlayerInventoryData>(plugin), SyncPlayerInventoryRepository {
+) : ProxySavablePlayerDataRepository<SyncPlayerInventoryData>(plugin), SyncPlayerInventoryRepository {
     override fun getTablesToLoad() = listOf(PlayerInventoryDataTable)
 
-    override suspend fun loadData(id: PlayerIDWrapper): SyncPlayerInventoryData {
+    override suspend fun loadDataProxySafely(id: PlayerIDWrapper): SyncPlayerInventoryData {
         return dataSource.query {
             val result = PlayerInventoryEntity.findByProfileID(id.profileID) ?: PlayerInventoryEntity.new(id) {}
             result.inventory.deserialize()
@@ -35,6 +36,7 @@ class SyncPlayerInventoryRepositoryImpl(
                     throw NullPointerException("profileID ${id.profileID} 를 통해 플레이어를 찾을 수 없습니다. 데이터 저장을 건너뜁니다.")
                 }
                 this.inventory = playerData.serialize()
+                this.updatedAt = LocalDateTime.now()
             }
         }
     }

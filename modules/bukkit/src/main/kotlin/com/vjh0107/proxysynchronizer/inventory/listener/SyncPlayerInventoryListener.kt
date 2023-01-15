@@ -21,5 +21,6 @@ class SyncPlayerInventoryListener(private val service: SyncPlayerInventoryServic
     @EventHandler
     fun onPlayerQuit(event: PlayerQuitEvent) {
         service.savePlayerInventory(event.player)
+        event.player.inventory.clear()
     }
 }

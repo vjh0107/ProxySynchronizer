@@ -10,7 +10,11 @@ class SyncPlayerInventoryDataFactory {
     @Factory
     fun provideSyncPlayerInventoryData(@InjectedParam player: Player): SyncPlayerInventoryData {
         return player.inventory.run {
-            SyncPlayerInventoryData(contents.filterNotNull().toMutableList(), armorContents.filterNotNull().toMutableList())
+            SyncPlayerInventoryData(
+                storageContents.toMutableList(),
+                armorContents.toMutableList(),
+                extraContents.toMutableList()
+            )
         }
     }
 }

@@ -17,17 +17,14 @@ class SyncPlayerInventoryServiceImpl(private val repository: SyncPlayerInventory
 
     override fun loadPlayerInventory(player: Player, data: SyncPlayerInventoryData) {
         with(player.inventory) {
-            contents = data.inventory.toTypedArray()
+            storageContents = data.storage.toTypedArray()
             armorContents = data.armors.toTypedArray()
+            extraContents = data.extras.toTypedArray()
         }
     }
 
     override fun savePlayerInventory(player: Player) {
         val data: SyncPlayerInventoryData by inject { parametersOf(player) }
-        savePlayerInventory(player, data)
-    }
-
-    override fun savePlayerInventory(player: Player, data: SyncPlayerInventoryData) {
         repository.setPlayerInventoryData(player, data)
     }
 }

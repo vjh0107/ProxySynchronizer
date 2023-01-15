@@ -6,3 +6,5 @@
 /build-logic/shared/.gradle/
 /build-logic/shared/build/
 /modules/bukkit/build/
+/.idea/
+/.idea/

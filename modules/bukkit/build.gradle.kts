@@ -10,6 +10,7 @@ barcodeTasks {
         main = "com.vjh0107.proxysynchronizer.ProxySynchronizerPlugin"
         name = "ProxySynchronizer"
         author = "vjh0107"
+        apiVersion = "1.19"
         depend = listOf("BarcodeFramework")
     }
 }
