@@ -12,6 +12,4 @@ interface SyncPlayerInventoryRepository {
     fun setPlayerInventoryData(id: PlayerIDWrapper, data: SyncPlayerInventoryData)
 
     fun setPlayerInventoryData(player: Player, data: SyncPlayerInventoryData)
-
-    suspend fun noticeLoadPlayerInventoryData(player: Player)
 }

@@ -4,10 +4,10 @@ import com.vjh0107.barcode.framework.AbstractBarcodePlugin
 import com.vjh0107.barcode.framework.component.BarcodeComponent
 import com.vjh0107.barcode.framework.database.player.PlayerIDWrapper
 import com.vjh0107.barcode.framework.database.player.getPlayerID
+import com.vjh0107.barcode.framework.database.player.repository.ProxySavablePlayerDataRepository
 import com.vjh0107.barcode.framework.koin.annotation.BarcodeSingleton
 import com.vjh0107.barcode.framework.serialization.deserialize
 import com.vjh0107.barcode.framework.serialization.serialize
-import com.vjh0107.proxysynchronizer.ProxySavablePlayerDataRepository
 import com.vjh0107.proxysynchronizer.inventory.SyncPlayerInventoryData
 import com.vjh0107.proxysynchronizer.inventory.repository.SyncPlayerInventoryRepository
 import com.vjh0107.proxysynchronizer.inventory.entity.PlayerInventoryDataTable
