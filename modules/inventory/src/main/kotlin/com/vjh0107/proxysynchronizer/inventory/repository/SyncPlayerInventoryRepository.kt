@@ -1,0 +1,6 @@
+package com.vjh0107.proxysynchronizer.inventory.repository
+
+import com.vjh0107.proxysynchronizer.core.repository.SyncPlayerRepository
+import com.vjh0107.proxysynchronizer.inventory.SyncPlayerInventoryData
+
+interface SyncPlayerInventoryRepository : SyncPlayerRepository<SyncPlayerInventoryData>

@@ -1,0 +1,6 @@
+package com.vjh0107.proxysynchronizer.properties.service
+
+import com.vjh0107.proxysynchronizer.core.service.SyncPlayerService
+import com.vjh0107.proxysynchronizer.properties.SyncPlayerPropertiesData
+
+interface SyncPlayerPropertiesService : SyncPlayerService<SyncPlayerPropertiesData>

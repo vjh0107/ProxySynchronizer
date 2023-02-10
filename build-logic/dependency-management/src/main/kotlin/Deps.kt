@@ -23,7 +23,7 @@ object Deps {
         const val DATA_FIXER = "com.mojang:datafixerupper:4.0.26"
         const val BRIGADIER = "com.mojang:brigadier:1.0.18"
 
-        const val MOCK_BUKKIT = "com.github.seeseemelk:MockBukkit-v1.18:2.85.2"
+        const val MOCK_BUKKIT = "com.github.seeseemelk:MockBukkit-v1.19:2.144.5"
 
         object KyoriAdventure {
             private val kyoriAdventureVersion: String by project

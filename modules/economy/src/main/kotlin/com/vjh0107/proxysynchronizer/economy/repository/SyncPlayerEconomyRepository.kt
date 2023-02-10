@@ -1,0 +1,6 @@
+package com.vjh0107.proxysynchronizer.economy.repository
+
+import com.vjh0107.proxysynchronizer.core.repository.SyncPlayerRepository
+import com.vjh0107.proxysynchronizer.economy.SyncPlayerEconomyData
+
+interface SyncPlayerEconomyRepository : SyncPlayerRepository<SyncPlayerEconomyData>

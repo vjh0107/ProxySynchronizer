@@ -1,0 +1,6 @@
+package com.vjh0107.proxysynchronizer.enderchest.repository
+
+import com.vjh0107.proxysynchronizer.core.repository.SyncPlayerRepository
+import com.vjh0107.proxysynchronizer.enderchest.SyncPlayerEnderChestData
+
+interface SyncPlayerEnderChestRepository : SyncPlayerRepository<SyncPlayerEnderChestData>

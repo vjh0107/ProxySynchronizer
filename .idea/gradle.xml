@@ -25,8 +25,11 @@
             </builds>
           </compositeBuild>
         </compositeConfiguration>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -35,6 +38,11 @@
             <option value="$PROJECT_DIR$/build-logic/shared" />
             <option value="$PROJECT_DIR$/modules" />
             <option value="$PROJECT_DIR$/modules/bukkit" />
+            <option value="$PROJECT_DIR$/modules/core" />
+            <option value="$PROJECT_DIR$/modules/economy" />
+            <option value="$PROJECT_DIR$/modules/enderchest" />
+            <option value="$PROJECT_DIR$/modules/inventory" />
+            <option value="$PROJECT_DIR$/modules/properties" />
           </set>
         </option>
       </GradleProjectSettings>

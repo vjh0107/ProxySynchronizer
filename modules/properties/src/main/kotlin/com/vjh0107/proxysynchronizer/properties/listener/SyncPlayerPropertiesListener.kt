@@ -1,0 +1,5 @@
+package com.vjh0107.proxysynchronizer.properties.listener
+
+import com.vjh0107.proxysynchronizer.core.listener.SyncPlayerListener
+
+interface SyncPlayerPropertiesListener : SyncPlayerListener
